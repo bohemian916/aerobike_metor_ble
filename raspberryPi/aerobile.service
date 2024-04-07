@@ -1,0 +1,12 @@
+[Unit]
+Description=aerobile service
+After=network.target
+
+[Service]
+Type=simple
+EnvironmentFile=/home/pi/work/aerobike/environment
+ExecStart=/usr/bin/python3 /home/pi/work/aerobike/main.py 
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
